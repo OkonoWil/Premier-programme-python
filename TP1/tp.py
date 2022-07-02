@@ -1,16 +1,15 @@
-from pickletools import long1
-
-
+dico = {"aide" : "Affiche les commandes du programme",
+        "surface" : "Calculer la surface en m2",
+        "volume" : "Calculer le volume en m3",
+        "quitter" : "Quitter le programme"}
 print("Tapez 'aide' pour afficher les commandes")
 reponse = input("com>")
 while reponse != "quitter":
     if(reponse == "aide"):
         print("Liste des commandes du programme")
         print("--------------------------------")
-        print("aide : Affiche les commandes du programme")
-        print("surface : Calculer la surface en m2")
-        print("volume : Calculer le volume en m3")
-        print("quitter : Quitter le programme")
+        for key , value in dico.items():
+            print(key , ":" , value)
         print("-----------------------------------------")
         reponse = input("com>")
     elif(reponse == "surface"):
